@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate')%>
+    <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Successfully Predicted!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div> -->
+    <div class="row" id="row-id">
+        <!-- <a href="./report/table.pdf" class="btn btn-success" style="margin-top: 15px;" download>Download Report</a> -->
+        <!-- <a id="send" class="btn btn-success" href='/predict/send-result?email=kaviarasan.r26@gmail.com' style="margin-top: 10px;">Send Report to Student</a> -->
+    </div>
+    <script>
+        const mailID = '<%- semesterone.studentEmail%>'
+        const report = '<%- pdfUrl%>'
+        const div = document.getElementById('row-id');
+        let createA = document.createElement('a');
+        var createAText = document.createTextNode('Download Report');
+        createA.setAttribute('href', report);
+        createA.setAttribute('class','btn btn-success')
+        createA.setAttribute('style','margin-top: 15px;')
+        createA.setAttribute('download','report');
+        createA.setAttribute('target','_blank');
+        createA.appendChild(createAText);
+        div.appendChild(createA);
+        let createB = document.createElement('a');
+        var createBText = document.createTextNode('Send Report to Student');
+        createB.setAttribute('href', `/predict/send-result?email=${mailID}`);
+        createB.setAttribute('class','btn btn-success')
+        createB.setAttribute('style','margin-top: 15px;')
+        createB.setAttribute('id','send');
+        createB.appendChild(createBText);
+        div.appendChild(createB);
+    </script>
+    <!-- <script src="/javascripts/sendMail.js"></script> -->

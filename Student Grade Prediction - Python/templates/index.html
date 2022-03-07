@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Please enter student details</p>
+        </div>
+        <div class="prediction_form">
+            <form action="\predict" method="POST">
+                <input type="number" class="textfield" name="sem_1" value="" min="0" max="10" step=".01" placeholder="Enter Semester 1 Grade Points"><br>
+                <input type="number" class="textfield" name="sem_2" value="" min="0" max="10" step=".01" placeholder="Enter Semester 2 Grade Points"><br>
+                <input type="number" class="textfield" name="sem_3" value="" min="0" max="10" step=".01" placeholder="Enter Semester 3 Grade Points"><br>
+                <input type="number" class="textfield" name="sem_4" value="" min="0" max="10" step=".01" placeholder="Enter Semester 4 Grade Points"><br>
+                <button type="submit" value="Predict Price">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
