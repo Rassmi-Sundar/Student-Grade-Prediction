@@ -8,7 +8,7 @@
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "Arun",
+  "author": "Rassmi",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
